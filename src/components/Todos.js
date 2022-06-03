@@ -9,16 +9,18 @@ import { AuthContext } from "../Context/AuthContext";
 const Todos = () => {
     // load context
   const {todos} = useContext(TodoContext) 
+
 //Load auth context
 const {isAuthenticated} =useContext(AuthContext)
-  return (
+  
+return (
     <div className="todo-list">
       <TodoForm />
       {isAuthenticated ? ( <ul>
         {todos.map((todo) => (
          <TodoItem key={todo.id} todo={todo} />
         ))}
-      </ul>) : (<p> Not auth </p>)}
+      </ul>) : (<p style={{textAlign:"center"}}> Not auth </p>)}
      
     </div>
   );

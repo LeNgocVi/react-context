@@ -9,9 +9,10 @@ const AuthContextProvider = ({children})=>{
         setAuthenticated(!isAuthenticated)
     }
 
-    useEffect(()=>{
-        alert(isAuthenticated ? "login sucess" : "not")
-    },[isAuthenticated])
+    // useEffect(()=>{
+    //     alert(isAuthenticated ? "login sucess" : "not")
+    // },[isAuthenticated])
+
     //context data
     const authContextData = {
         isAuthenticated,
